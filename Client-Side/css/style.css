@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Vigrand;
+    src: url('../fonts/Vigrand-Regular.ttf');
+}
+
+.carousel {
+    position: absolute;
+    z-index: -1; 
+}
+
+.car-image {
+    margin: 0px;
+    padding: 0px;
+    width: 1900px;
+    height: 950px;
+    bottom: 25px;
+    overflow-y: hidden;
+}
+
+.welcome {
+    color: white;
+    font-family: Vigrand;
+    font-size: 150px;
+    left: 675px;
+    padding-top: 300px;
+    position: absolute;
+}
+
+.button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 550px;
+    left: 900px;
+    width: 100px;
+    height: 24px;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+}
