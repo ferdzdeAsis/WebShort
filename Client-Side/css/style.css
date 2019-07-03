@@ -38,3 +38,21 @@
     background-color: white;
     position: fixed;
 }
+
+.nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    padding: 50px;
+    z-index: -1;
+}
+
+.login-box {
+    border-style: ridge;
+    border-radius: 25px;
+    text-align: center;
+    left: 50px;
+    margin-top: 200px; 
+    margin-left: 775px;
+    width: 300px;
+    height: 200px;
+}
