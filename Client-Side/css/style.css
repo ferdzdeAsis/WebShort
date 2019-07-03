@@ -3,19 +3,37 @@
     src: url('../fonts/Vigrand-Regular.ttf');
 }
 
-.carousel {
-    position: absolute;
-    z-index: -1; 
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
-
-.car-image {
-    margin: 0px;
-    padding: 0px;
-    width: 1900px;
-    height: 950px;
-    bottom: 25px;
-    overflow-y: hidden;
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
 
 .welcome {
     color: white;
@@ -29,30 +47,20 @@
 .button {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 25px;
-    padding: 10px;
     margin-top: 550px;
-    left: 900px;
-    width: 100px;
-    height: 24px;
+    left: 850px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
     text-align: center;
     background-color: white;
     position: fixed;
 }
 
-.nav {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: fixed;
-    padding: 50px;
-    z-index: -1;
+.button:hover{
+    background-color: #b2b2b2
 }
 
-.login-box {
-    border-style: ridge;
-    border-radius: 25px;
-    text-align: center;
-    left: 50px;
-    margin-top: 200px; 
-    margin-left: 775px;
-    width: 300px;
-    height: 200px;
+.mySlides {
+	display: none;
 }
