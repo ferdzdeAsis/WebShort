@@ -44,8 +44,11 @@
     position: absolute;
 }
 
-.button {
+.button, .nav, .login-box {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button {
     border-radius: 25px;
     margin-top: 550px;
     left: 850px;
@@ -63,4 +66,26 @@
 
 .mySlides {
 	display: none;
+}
+
+.nav {
+    padding: 25px;
+    padding-right: 100px;
+    text-align: right;
+}
+
+.login-box {
+    text-align: center;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 50px;
+    margin-top: 150px;
+    margin-left: 600px;
+    margin-right: 600px;
+}
+
+.option {
+    text-align: center;
+    text-decoration: none;
+    color: black
 }
