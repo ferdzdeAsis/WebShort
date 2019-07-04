@@ -3,7 +3,54 @@
     src: url('../fonts/Vigrand-Regular.ttf');
 }
 
-/* Fading animation */
+.welcome {
+    color: white;
+    font-family: Vigrand;
+    font-size: 150px;
+    left: 675px;
+    padding-top: 300px;
+    position: absolute;
+}
+
+.button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 25px;
+    margin-top: 550px;
+    left: 850px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+}
+
+.button:hover{
+    background-color: #b2b2b2
+}
+
+
+.slideshow-container{
+    background-image: url('images/1.jpg'), url('images/2.jpg'), url('images/3.jpg');
+    object-fit: cover;
+}    
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    display: none;
+  }
+  
+.active {
+    background-color: #717171;
+ }
+  
+  /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -20,72 +67,7 @@
     from {opacity: .4} 
     to {opacity: 1}
 }
-.slideshow-container {
-  max-width: 700px;
-  position: relative;
-  margin: auto;
-}
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
 
-.welcome {
-    color: white;
-    font-family: Vigrand;
-    font-size: 150px;
-    left: 675px;
-    padding-top: 300px;
-    position: absolute;
-}
-
-.button, .nav, .login-box {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.button {
-    border-radius: 25px;
-    margin-top: 550px;
-    left: 850px;
-    width: 200px;
-    height: 50px;
-    font-size: 25px;
-    text-align: center;
-    background-color: white;
-    position: fixed;
-}
-
-.button:hover{
-    background-color: #b2b2b2
-}
-
-.mySlides {
-	display: none;
-}
-
-.nav {
-    padding: 25px;
-    padding-right: 100px;
-    text-align: right;
-}
-
-.login-box {
-    text-align: center;
-    border-style: solid;
-    border-radius: 25px;
-    padding: 50px;
-    margin-top: 150px;
-    margin-left: 600px;
-    margin-right: 600px;
-}
-
-.option {
-    text-align: center;
-    text-decoration: none;
-    color: black
+.mySlides{
+    display: none;
 }
