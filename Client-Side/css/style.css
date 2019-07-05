@@ -3,37 +3,16 @@
     src: url('../fonts/Vigrand-Regular.ttf');
 }
 
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+body {
+    margin: 0px;
 }
-  
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/1.jpg), url(../images/2.jpg), url(../images/3.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
 }
-  
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-.slideshow-container {
-  max-width: 700px;
-  position: relative;
-  margin: auto;
-}
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
 
 .welcome {
     color: white;
@@ -57,7 +36,7 @@
     font-size: 25px;
     text-align: center;
     background-color: white;
-    position: fixed;
+    position: absolute;
 }
 
 .button:hover{
@@ -88,4 +67,19 @@
     text-align: center;
     text-decoration: none;
     color: black
+}
+.navbar {
+    overflow: hidden;
+    background-color: #0d0d0d;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.navbar a {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
 }

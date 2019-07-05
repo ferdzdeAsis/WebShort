@@ -8,30 +8,31 @@
     <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="images/1.jpg" style="width:100%" alt = "missing">
-        </div>
+    <header>
+            <div class="main">
+                    <div class="navbar">
+                        <a href="index.html">Home</a>
+                    </div>   
+                </div>
+                <div class = "main">
+                    <h1 class="welcome">Welcome</h1>
+                    <button class="button" onclick="login()">Book Now!</button>
+                    <script>
+                        function login() {
+                            window.location.href = 'pages/login.html'
+                        }
+                    </script>
+                </div>
+    </header>
+    <script src="js/background.js"></script>
 
-        <div class="mySlides fade">
-            <img src="images/2.jpg" style="width:100%" alt = "missing2">
-        </div>
-
-        <div class="mySlides fade">
-            <img src="images/3.jpg" style="width:100%" alt = "missing3">
-        </div>
-    </div>
-    <h1 class="welcome">Welcome</h1>
-    <button class="button" onclick="login()">Book Now!</button>
     <script>
-        function login() {
-            window.location.href = 'pages/login.html'
-        }
+      easy_background("header",{
+          slide: ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"],
+            
+          delay: [2000, 2000, 2000, 2000, 2000]
+        }  
+      );
     </script>
-    <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div>
 </body>
 </html>
