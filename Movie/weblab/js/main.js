@@ -7,8 +7,8 @@ $(document).ready(() => {
   });
 });
 
-function getMovies(searchText){
-  axios.get('http://www.omdbapi.com?s='+searchText+ "&apikey=7b723748")
+function getMovies(searchText) {
+  axios.get('http://www.omdbapi.com?s=' + searchText + "&apikey=7b723748")
     .then((response) => {
       console.log(response);
       let movies = response.data.Search;
@@ -31,9 +31,12 @@ function getMovies(searchText){
       console.log(err);
     });
 }
+function liveSearch(searchText) {
+  
+}
 
-function getSeries(searchText){
-  axios.get('http://www.omdbapi.com?s='+searchText+ "&apikey=7b723748")
+function getSeries(searchText) {
+  axios.get('http://www.omdbapi.com?s=' + searchText + "&apikey=7b723748")
     .then((response) => {
       console.log(response);
       let series = response.data.Search;
@@ -58,27 +61,27 @@ function getSeries(searchText){
 }
 
 
-function movieSelected(id){
+function movieSelected(id) {
   sessionStorage.setItem('movieId', id);
   window.location = 'movie.html';
   return false;
 }
 
-function seriesSelected(id){
+function seriesSelected(id) {
   sessionStorage.setItem('seriesId', id);
   window.location = 'series.html';
   return false;
 }
 
-function getMovie(){
+function getMovie() {
   let movieId = sessionStorage.getItem('movieId');
 
-  axios.get('http://www.omdbapi.com?i='+movieId+ "&apikey=7b723748")
+  axios.get('http://www.omdbapi.com?i=' + movieId + "&apikey=7b723748")
     .then((response) => {
       console.log(response);
       let movie = response.data;
 
-      let output =`
+      let output = `
         <div class="row">
           <div class="col-md-4">
             <img src="${movie.Poster}" class="thumbnail">
@@ -115,15 +118,15 @@ function getMovie(){
     });
 }
 
-function getSeries(){
+function getSeries() {
   let seriesId = sessionStorage.getItem('seriesId');
 
-  axios.get('http://www.omdbapi.com?i='+seriesId+ "&apikey=7b723748")
+  axios.get('http://www.omdbapi.com?i=' + seriesId + "&apikey=7b723748")
     .then((response) => {
       console.log(response);
       let series = response.data;
 
-      let output =`
+      let output = `
         <div class="row">
           <div class="col-md-4">
             <img src="${movie.Poster}" class="thumbnail">
