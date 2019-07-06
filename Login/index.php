@@ -22,15 +22,15 @@ try {
         $pword = $_POST['password'];
 
         //Query and used to match if the credentials are registered in the Database
-        $sql = "select * from acc_details where acc_details.username = '" . $uname . "' AND acc_details.password = '" . $pword. "' limit 1";
+        $sql = "select * from acc_details where acc_details.username = '" . $uname . "' AND acc_details.password = '" . $pword . "' limit 1";
         $result = $conn->query($sql);
 
         if (mysqli_num_rows($result) == 1) {
-            echo "You have successfully logged in";
-            exit();
+            echo "<script type='text/javascript'>
+            window.location.href='index1.html'; </script>";
         } else {
-            echo "You have incorrect credentials! ";
-            exit();
+            echo "<script type='text/javascript'>alert('Incorrect Credentials!!!');
+                window.location.href='index.html'; </script>";
         }
 
     } else {
