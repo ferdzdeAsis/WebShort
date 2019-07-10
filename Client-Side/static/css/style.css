@@ -54,14 +54,14 @@ header{
 }
 
 .login-box {
-    text-align: center;
-    border-style: solid;
-    border-radius: 25px;
-    padding: 50px;
-    margin-top: 150px;
-    margin-left: 600px;
-    margin-right: 600px;
-    background-color: white;
+    width: 500px;
+	height: 400px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgba(44, 62, 80,0.7);
+    margin-top: 160px;
+    border-radius: 10%;
+    padding-top: 45px;
 }
 
 .option {
@@ -159,4 +159,22 @@ th{
 
 .view-trips tr:hover{
     background-color: #ddd;
+}
+
+input[type="text"],input[type="password"]{
+	margin-top: 30px;
+	height: 45px;
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-left: 40px;
+}
+
+.btn-login{
+	padding: 15px 25px;
+	border: none;
+	background-color: #27ae60;
+    color: #fff;
+    font-size: 20px;
 }
