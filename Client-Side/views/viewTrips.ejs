@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
     <script type="text/javascript" src="../../app.js"></script>
-    <title>Document</title>
+    <title>View Trips | Logitech Express</title>
 </head>
 <body>
-    <div class="nav">
-        <a class="option">Home</a>
+    <div class="navbar">
+        <a class="option" href="../index.html">Home</a>
+        <a class="option">View Booked Trips</a>
     </div>
-    <h1>View Trips</h1>
+    <h1 class = "viewTrips">View Trips</h1>
     <br>
-    <table>
-        <tr>
+    <table class="view-trips">
+        <thead>
             <th>Trip ID</th>
             <th>Bus Liner</th>
             <th>Origin</th>
@@ -24,7 +25,8 @@
             <th>Seats Available</th>
             <th>Date of Departure</th>
             <th>Fare</th>
-        </tr>
+        </thead>
+        <tbody>
         <% trips.forEach(function(value) { %>
             <tr>
                 <td><%= value.trip_id %></td>
@@ -36,6 +38,7 @@
                 <td>₱<%= value.fare %></td>
             </tr>
         <% }) %>
+        </tbody>
     </table>
 </body>
 </html>

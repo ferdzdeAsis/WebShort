@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="shortcut icon" href="../static/images/logo.jpg" type="image/jpg">
-    <title>Document</title>
+    <title>View Trips | Logitech Express</title>
 </head>
 <body>
     <div class="navbar">
         <a class="option" href="../index.html">Home</a>
+        <a class="option">View Booked Trips</a>
     </div>
-    <h1>View Trips</h1>
+    <h1 class = "viewTrips">View Trips</h1>
     <br>
     <table class="view-trips">
         <thead>
@@ -23,10 +24,26 @@
             <th>Seats Available</th>
             <th>Date of Departure</th>
             <th>Fare</th>
+            <th>Action</th>
         </thead>
         <tbody>
-            
+            <tr>
+                <td>02</td>
+                <td>Solid North</td>
+                <td>Baguio</td>
+                <td>San Fabian</td>
+                <td>50/50</td>
+                <td>08/15/2019</td>
+                <td>75</td>
+                <td>Book Now</td>
+            </tr>
         </tbody>
     </table>
+    <!---<button class="button" onclick="login()">Book Now!</button>
+            <script>
+                function login() {
+                    window.location.href = 'views/login.html'
+                }
+            </script>!-->
 </body>
 </html>
