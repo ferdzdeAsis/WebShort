@@ -13,12 +13,6 @@
 
 <body style="background-image:url(images/login-bg.jpg); background-size: cover">
     <div class="navbar">
-        <a class="option" onclick ="back()">Home</a>
-        <script>
-            function back() {
-                window.location.href = '/';
-            }
-        </script>
         <a class="option" href="/viewTrips">View Trips</a>
         <a class="option">View Booked Trips</a>
         <a class="logout">Logout</a>
@@ -54,10 +48,45 @@
                 <td><%= value.seats_available %>/50</td>
                 <td><%= value.date %></td>
                 <td>₱<%= value.fare %></td>
-                <td><button>Book Now</button></td>
+                <td><button id="btnShowModal">Book Trip</button></td>
             </tr>
         <% }) %>
         </tbody>
     </table>
+
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class = "close">&times;</span>
+            <p>Some text in the modal...</p>
+        </div>
+    </div>
+
+    <script>
+            // Get the modal
+            var modal = document.getElementById("bookModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("btnShowModal");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
 </body>
 </html>
