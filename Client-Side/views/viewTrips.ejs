@@ -5,17 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
     <script type="text/javascript" src="../../app.js"></script>
     <title>View Trips | Logitech Express</title>
 </head>
-<body>
+
+<body style="background-image:url(images/login-bg.jpg); background-size: cover">
     <div class="navbar">
-        <a class="option" href="../index.html">Home</a>
+        <a class="option" onclick ="back()">Home</a>
+        <script>
+            function back() {
+                window.location.href = '/';
+            }
+        </script>
+        <a class="option" href="/viewTrips">View Trips</a>
         <a class="option">View Booked Trips</a>
+        <a class="logout">Logout</a>
     </div>
     <h1 class = "viewTrips">View Trips</h1>
     <br>
+    <div class = "search-container">
+        <form>
+            <input type="search" placeholder="Search">
+            <button type="submit" name="submit-search"><i class="fa fa-search"></i></button>
+            
+        </form>
+    </div>
     <table class="view-trips">
         <thead>
             <th>Trip ID</th>
@@ -25,6 +41,8 @@
             <th>Seats Available</th>
             <th>Date of Departure</th>
             <th>Fare</th>
+            <th>Action</th>  
+        </tr>
         </thead>
         <tbody>
         <% trips.forEach(function(value) { %>
@@ -33,9 +51,10 @@
                 <td><%= value.bus_line %></td>
                 <td><%= value.origin %></td>
                 <td><%= value.destination %></td>
-                <td><%= value.seats_available %></td>
+                <td><%= value.seats_available %>/50</td>
                 <td><%= value.date %></td>
                 <td>₱<%= value.fare %></td>
+                <td><button>Book Now</button></td>
             </tr>
         <% }) %>
         </tbody>
