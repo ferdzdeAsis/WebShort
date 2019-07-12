@@ -161,7 +161,7 @@ th{
     background-color: white;
 }
 
-input[type="username"],input[type="password"]{
+input[type="text"], input[type="password"]{
 	margin-top: 30px;
 	height: 45px;
 	width: 300px;

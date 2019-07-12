@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #movies img, #movie img{
   width: 100%;
 }
@@ -10,4 +11,18 @@
   #movies .col-md-3 img{
     height: 280px;
   }
+=======
+#movies img, #movie img{
+  width: 100%;
+}
+
+@media(min-width:960px){
+  #movies .col-md-3 .well{
+    height: 400px;
+  }
+
+  #movies .col-md-3 img{
+    height: 280px;
+  }
+>>>>>>> 1955fb58b305032e737fae9bae2471d7f9635662
 }

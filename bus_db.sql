@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
+<<<<<<< HEAD
+-- Generation Time: Jul 09, 2019 at 04:14 AM
+=======
 -- Generation Time: Jul 10, 2019 at 04:09 AM
+>>>>>>> 1955fb58b305032e737fae9bae2471d7f9635662
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -56,7 +60,11 @@ CREATE TABLE IF NOT EXISTS `bus_sched` (
   `origin` varchar(45) NOT NULL,
   `destination` varchar(45) NOT NULL,
   `seats_available` int(11) NOT NULL,
+<<<<<<< HEAD
+  `date` datetime NOT NULL,
+=======
   `date` varchar(45) NOT NULL,
+>>>>>>> 1955fb58b305032e737fae9bae2471d7f9635662
   `fare` decimal(5,2) NOT NULL,
   PRIMARY KEY (`trip_id`),
   UNIQUE KEY `trip_id_UNIQUE` (`trip_id`)
