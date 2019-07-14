@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <title>Logitech Express</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <header>
+            <div class="main">
+                    <div class="navbar">
+                        <a onclick="back()">Home</a>
+                        <script>
+                                function back() {
+                                    window.location.href = '/';
+                                 }
+                            </script>
+                    </div>   
+            </div>
+            <div class = "main">
+                <h1 class="welcome">Welcome</h1>
+                    <button class="button" onclick="login()">Book Now!</button>
+                    <script>
+                        function login() {
+                            window.location.href = '/login'
+                        }
+                    </script>
+            </div>
+    </header>
+    <script src="js/background.js"></script>
+
+    <script>
+      easy_background("header",{
+          slide: ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"],
+            
+          delay: [2000, 2000, 2000, 2000, 2000]
+        }  
+      );
+    </script>
+    <footer>
+        <div id="footer">
+            <a class="links">Connect With Us</a>
+            <a class="Facebook"><img src="images/logo1.jpg" alt="Family" width="30" height="30"/></a>	
+            <a class="Instagram"><img src="images/logo2.png" alt="Family" width="30" height="30"/></a>
+            <a class="Google"><img src="images/logo3.png" alt="Family" width="30" height="30"/></a>
+            <a class="abus">About Us</a>
+            <a class="description"> Unit 6Y, #75 OBS Building III, 
+                Lopez Jaena St., Brgy Doña Aurora, 
+                Quezon City, Metro Manila, NCR, 
+                Philippines 1113
+                
+                 Customer Hotline 
+                ( +63 ) 917-535-1501 | ( 02 ) 507-8575 
+                Office Number 
+                ( 02 ) 507-8656 
+                
+                 support@logitechexpress.com<br></a>>
+        </div>
+    </footer>
+</body>
+</html>
