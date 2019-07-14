@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
+    <script src="../../app.js"></script>
+    <title>Success | Logitech Express</title>
+</head>
+<body>
+    <h1>Success!</h1>
+    <p>You have successfully booked a trip!</p>
+    <p>Present Reservation ID <%= resId %> to the counter and pay amount of ₱<%= amount %>.00.</p><br>
+    <button type="button" onclick="home()">Home</button>
+    <button type="button" onclick="viewTrips()">Book Again</button>
+    <script>
+        function home() {
+                window.location.href='/home'
+        }
+
+        function viewTrips() {
+            window.location.href='/viewTrips'
+        }
+    </script>
+</body>
+</html>

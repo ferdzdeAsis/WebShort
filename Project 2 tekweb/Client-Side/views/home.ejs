@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <title>Logitech Express</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <header>
+            <div class="main">
+                    <div class="navbar">
+                        <script>
+                                function back() {
+                                    window.location.href = '/home';
+                                 }
+                            </script>
+                            <a style="margin-left: 1700px;" href="/">Logout</a>
+                    </div>   
+            </div>
+            <div class = "main">
+                <h1 class="welcome">Welcome</h1>
+                    <button class="button" onclick="login()">View Trips</button>
+                    <script>
+                        function login() {
+                            window.location.href = '/viewTrips'
+                        }
+                    </script>
+            </div>
+    </header>
+    <script src="js/background.js"></script>
+
+    <script>
+      easy_background("header",{
+          slide: ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"],
+            
+          delay: [2000, 2000, 2000, 2000, 2000]
+        }  
+      );
+    </script>
+       <footer>
+            <div id="footer">
+                <table style="border-style: none;">
+                    <tr>
+                        <td style="width: 50%; border-style: none;"><a class="abus">About Us</a>
+                            <a class="description"> Logitech Express is an online reservation system which enable the 
+                                    passenger to login and book a seat online. Logitech Express has a numerous buses and bus 
+                                    trips to serve every day to meet the needs of people when it comes to transport.
+                                    Logitech Express provides the safest transportation not only for the 
+                                    passenger's sake but also to serve in the community.<br></a></td>
+                        <td style="border-style: none; padding: none;"><a class="links">Connect With Us</a>
+                            <a class="Facebook"><img src="images/logo1.jpg" alt="Family" width="30" height="30"/></a>	
+                            <a class="Instagram"><img src="images/logo2.png" alt="Family" width="30" height="30"/></a>
+                            <a class="Google"><img src="images/logo3.png" alt="Family" width="30" height="30"/></a></td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+</body>
+</html>
