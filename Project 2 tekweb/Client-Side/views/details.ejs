@@ -9,22 +9,21 @@
     <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
     <script src="../../app.js"></script>
 </head>
-<body>
-    <div class = "col-md-12">
+<body style="background-image: url(images/login.jpg);">
     <div class = "content-panel">
-        <h1 class = "viewDetails">Trip Details</h1>
+        <h1 class = "viewDetails">TRIP DETAILS</h1>
             <div class = "content-details">
                 <% selected.forEach(function(value) { %>
-                <p>Bus line: <%= value.bus_line %></p>
-                <p>From: <%= value.origin %></p>
-                <p>To: <%= value.destination %></p>
+                <p><b>Bus line:</B> <%= value.bus_line %></p>
+                <p><b>From:</B> <%= value.origin %></p>
+                <p><b>To:</B> <%= value.destination %></p>
                 <% var c = (value.date).split(/[- :]/) %>
-                <p>Date and Time of Departure: <%= c[1] %>/<%= c[2] %>/<%= c[0] %> <%= c[3] %>:<%= c[4] %></p>
-                <p>Fare (per head): <%= value.fare %></p>
+                <p><b>Date and Time of Departure:</B> <%= c[1] %>/<%= c[2] %>/<%= c[0] %> <%= c[3] %>:<%= c[4] %></p>
+                <p><b>Fare (per head):</B> <%= value.fare %></p>
                 <form action="/book" method="POST">
                     <input type="text" name="id" value="<%= value.trip_id %>" style="display: none;">
                     <input type="number" name="seatNo" class="seat">
-                    <button type="submit">Book Now!</button>
+                    <button class = "reserveButton" type="submit">Book Now!</button>
                 </form>
                 <% }) %>
             </div>
