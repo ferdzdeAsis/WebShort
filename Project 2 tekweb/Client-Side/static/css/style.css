@@ -5,6 +5,8 @@
 
 body {
     margin: 0px;
+    background-image: url(../images/login-bg.jpg);
+    background-size: cover;
 }
 
 header{
@@ -91,6 +93,28 @@ header{
     float: left;
 }
 
+.navbar a:hover{
+    background-color: #deeaee;
+    color: black;
+}
+.navbar a.active{
+    background-color: #deeaee;
+    color: black;
+}
+.navbar-right{
+    float: right;
+}
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .navbar-right {
+      float: none;
+    }
+  }
 table, th, tr, td{
     border: 1px solid black;
 }
@@ -159,14 +183,13 @@ div#footer {
     margin-left: 5%;
     margin-right: 15%;
     font-family: Arial, Helvetica, sans-serif;
-    border: 0px;
-    height: 50%;
+    height: 75%;
+    border: 1px solid black;
 }
 .view-trips th{
     background-color: #d5f4e6;
 }
 .view-trips td, .view-trips th{
-    border: 1px solid #ddd;
     padding: 8px 16px;
 }
 
@@ -181,7 +204,6 @@ input[type="text"], input[type="password"]{
 	font-size: 18px;
 	margin-bottom: 20px;
 	background-color: #fff;
-	padding-left: 40px;
 }
 
 .btn-login{
@@ -200,7 +222,6 @@ input[type=search] {
 }
 
 #searchBus{
-    background-image: url('../images/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 25%; /* Full-width */
@@ -223,11 +244,6 @@ input[type=search] {
   #busTable td tr a:hover:not(.header) {
     background-color: #eee; /* Add a hover effect to all links, except for headers */
   }
-
-.logout{
-    float: left;
-    margin-left: 70%;
-}
 .reserve{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -252,7 +268,7 @@ hr{
 }
 .fixedTable{
     overflow-y: auto;
-    height: 400px;
+    height: 600px;
 }
 .fixedTable thead th{
     position: sticky;
@@ -322,4 +338,10 @@ hr{
     font-size: 16px;
     font-weight: bold;
     margin: 0 auto;
+}
+.loginHeader{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    text-align: center;
+    letter-spacing: 10px;
 }

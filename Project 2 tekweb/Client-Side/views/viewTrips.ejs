@@ -11,17 +11,19 @@
     <title>View Trips | Logitech Express</title>
 </head>
 
-<body style="background-image:url(images/login-bg.jpg); background-size: cover">
+<body>
     <div class="navbar">
-            <a class="option" href="/home">Home</a>
+        <a href="/home">Home</a>
             <script>
                     function back() {
                         window.location.href = '/home';
                      }
                 </script>
-        <a class="option" href="/viewTrips">View Trips</a>
-        <a class="option" href="">View Booked Trips</a>
+        <a class="active" href="/viewTrips">View Trips</a>
+        <a href="">View Booked Trips</a>
+        <div class = "navbar-right">
         <a class="logout" href="/">Logout</a>
+        </div>
     </div>
     <h1 class = "viewTrips">TRIPS AVAILABLE</h1>
     <hr/>
