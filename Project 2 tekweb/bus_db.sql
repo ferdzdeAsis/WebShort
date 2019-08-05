@@ -166,6 +166,64 @@ INSERT INTO `reserved` (`trip_id`, `reserve_id`, `seatNo`, `amount`, `client_nam
 (137, 'FafbJFv', 15, 6000, 'cleo111');
 COMMIT;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pending_trips`
+--
+
+DROP TABLE IF EXISTS `pending_trips`;
+CREATE TABLE IF NOT EXISTS `pending_trips` (
+  `pending_id` int(11) NOT NULL,
+  `trip_id` int(11) NOT NULL,
+  `bus_line` varchar(45) NOT NULL,
+  `origin` varchar(45) NOT NULL,
+  `destination` varchar(45) NOT NULL,
+  `seatNo` int(11) NOT NULL,
+  `date` varchar(45) NOT NULL,
+  `reserve_id` varchar(45) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `client_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`trip_id`),
+  UNIQUE KEY `trip_id_UNIQUE` (`trip_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pending_trips`
+--
+
+INSERT INTO `pending_trips` (`pending_id`, `trip_id`, `bus_line`, `origin`, `destination`, `seatNo`, `date`, `reserve_id`, `amount`, `client_name`) VALUES
+(1, 122, 'Partas', 'Baguio', 'Pangasinan', 1, '2019-07-14 05:30:00', 'WYcgbgl', '600.00', 'Cleo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cancelled_trips`
+--
+
+DROP TABLE IF EXISTS `cancelled_trips`;
+CREATE TABLE IF NOT EXISTS `cancelled_trips` (
+  `cancelled_id` int(11) NOT NULL,
+  `trip_id` int(11) NOT NULL,
+  `bus_line` varchar(45) NOT NULL,
+  `origin` varchar(45) NOT NULL,
+  `destination` varchar(45) NOT NULL,
+  `seatNo` int(11) NOT NULL,
+  `date` varchar(45) NOT NULL,
+  `reserve_id` varchar(45) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `client_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`trip_id`),
+  UNIQUE KEY `trip_id_UNIQUE` (`trip_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cancelled_trips`
+--
+
+INSERT INTO `cancelled_trips` (`cancelled_id`, `trip_id`, `bus_line`, `origin`, `destination`, `seatNo`, `date`, `reserve_id`, `amount`, `client_name`) VALUES
+(1, 122, 'Partas', 'Baguio', 'Pangasinan', 1, '2019-07-14 05:30:00', 'WYcgbgl', '600.00', 'Cleo');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

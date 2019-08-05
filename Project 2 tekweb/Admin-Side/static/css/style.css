@@ -1,0 +1,325 @@
+@font-face {
+    font-family: Vigrand;
+    src: url('../fonts/Vigrand-Regular.ttf');
+}
+
+body {
+    margin: 0px;
+}
+
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/1.jpg), url(../images/2.jpg), url(../images/3.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.welcome {
+    color: white;
+    font-family: Vigrand;
+    font-size: 150px;
+    left: 675px;
+    padding-top: 20px;
+    position: absolute;
+}
+.logitech {
+    color: white;
+    font-family: Vigrand;
+    font-size: 100px;
+    left: 580px;
+    padding-top: 170px;
+    position: absolute;
+}
+.button, .nav, .login-box {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button {
+    border-radius: 25px;
+    margin-top: 380px;
+    left: 850px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+}
+
+.button:hover{
+    background-color: #b2b2b2
+}
+
+.mySlides {
+	display: none;
+}
+
+.nav {
+    padding: 25px;
+    padding-right: 100px;
+    text-align: right;
+}
+
+.login-box {
+    width: 500px;
+	height: 400px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgba(44, 62, 80,0.7);
+    margin-top: 160px;
+    border-radius: 10%;
+    padding-top: 45px;
+}
+
+.option {
+    text-align: center;
+    text-decoration: none;
+    color: black
+}
+.navbar {
+    overflow: hidden;
+    background-color: #0d0d0d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+table, th, tr, td{
+    border: 1px solid black;
+}
+
+table, tr {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
+div#footer {
+    font-size: 12px;
+	background: #102c28;
+	margin: 0;
+	padding: 10px 0 10px;
+    bottom:0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.links {
+    font-size: 23px;
+    color: 	#fff;
+    
+}
+
+.abus {
+    font-size: 23px; 
+    color: #fff;
+    
+}
+.description {
+    display: flex;
+    align-items: center;
+    font-size: 20px; 
+    color: #fff;
+    
+}
+.facebook {
+    width: 30vh;
+    height: 20vh;
+    display: flex;
+    margin-left: 60%;
+}
+.instagram {
+    width: 30vh;
+    height: 20vh;
+    display: flex;
+    margin-left: 60%;
+}
+.google {
+    display: flex;
+    margin-left: 60%;
+}
+
+.viewTrips{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 15px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+.view-trips{
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px;
+    height: 50%;
+}
+.view-trips th{
+    background-color: #d5f4e6;
+}
+.view-trips td, .view-trips th{
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+}
+
+.view-trips td{
+    background-color: white;
+}
+
+input[type="text"], input[type="password"]{
+	margin-top: 30px;
+	height: 45px;
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-left: 40px;
+}
+
+.btn-login{
+	padding: 15px 25px;
+	border: none;
+	background-color: #27ae60;
+    color: #fff;
+    font-size: 20px;
+}
+
+input[type=search] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+#searchBus{
+    background-image: url('../images/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 25%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    padding-right: 50px;
+    margin-left: 70%;
+  }
+
+  #busTable td a{
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+  }
+  
+  #busTable td tr a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+
+.logout{
+    float: left;
+    margin-left: 70%;
+}
+.reserve{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.seat{
+    font-family: Arial, Helvetica, sans-serif;
+}  
+
+.login-button {
+    padding: 7px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.content{
+    text-align: center;
+    margin-top: 100px;
+}
+hr{
+    height: 5px;
+    background-color: black;
+    border: 0;
+}
+.fixedTable{
+    overflow-y: auto;
+    height: 400px;
+}
+.fixedTable thead th{
+    position: sticky;
+    top: 0;
+}
+.col-md-12{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.content-details{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 50px;
+    color: white;
+}
+
+.viewDetails{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    text-align: center;
+}
+
+.content-panel{
+    width: 600px;
+    height: 400px;
+    text-align: left;
+    margin: 0 auto;
+    background-color: rgba(00, 62, 80,1);
+    margin-top: 160px;
+    border-radius: 10%;
+    padding-top: 45px;
+}
+.reserveButton{
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.detailsButton{
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.success{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    text-align: center;
+}
+.content-success{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 50px;
+    color: white;
+    font-size: 30px;
+}
+.homeButton{
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.bookButton{
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+}
