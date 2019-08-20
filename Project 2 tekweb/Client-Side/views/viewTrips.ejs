@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/logo.jpg" type="image/jpg">
-    <script type="text/javascript" src="../../app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <title>View Trips | Logitech Express</title>
 </head>
 
@@ -28,20 +28,24 @@
     <h1 class = "viewTrips">TRIPS AVAILABLE</h1>
     <hr/>
     <br>
-    <div>
-        <input type="search" placeholder="Search" id="searchBus" onkeyup="searchFunction()">            
+    <div class="searchArea">
+        <form action="/searchTrip" method="POST">
+            <input type="text" placeholder="Origin" name="origin">
+            <input type="text" placeholder="Destination" name="destination">
+            <button type="submit" class="searchSubmit">Search</button>
+        </form>            
     </div>
     <div class="fixedTable">
     <table class="view-trips">
         <thead>
-            <th>Trip ID</th>
-            <th>Bus Liner</th>
-            <th>Origin</th>
-            <th>Destination</th>
-            <th>Seats Available</th>
-            <th>Date of Departure</th>
-            <th>Fare</th>
-            <th>Action</th>
+            <th ><a class="theader" href='/viewTripsSortById'>Trip ID</a></th>
+            <th><a class="theader" href='/viewTripsSortByLiner'>Bus Liner</a></th>
+            <th><a class="theader" href='/viewTripsSortByOrigin'>Origin</a></th>
+            <th><a class="theader" href='/viewTripsSortByDes'>Destination</a></th>
+            <th><a class="theader" href='/viewTripsSortBySeats'>Seats Available</a></th>
+            <th><a class="theader" href='/viewTripsSortByDate'>Date of Departure</a></th>
+            <th><a class="theader" href='/viewTripsSortByFare'>Fare</a></th>
+            <th><a class="theader" href='/viewTripsSortById'></a>Action</a></th>
         </tr>
         </thead>
         <tbody class id = "busTable">

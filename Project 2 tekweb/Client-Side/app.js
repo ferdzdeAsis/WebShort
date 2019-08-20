@@ -13,7 +13,7 @@ var randomString = require('randomstring');
 let con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'bus_db'
 });
 
@@ -55,7 +55,7 @@ app.use((req, res, next) => {
 });
 
 
-//landing page of unregisterd users
+//landing page of unregistered users
 app.get('/', (req, res) => {
     res.render(__dirname + '/index');
 });
@@ -85,7 +85,8 @@ app.post('/verify', (req, res) => {
 //homepage of logged in user
 app.get('/home', (req, res) => {
     if (req.session.user) {
-        res.render('home');
+        var user = req.session.user;
+        res.render('home', {user});
     } else {
         res.redirect('/login');
     }
@@ -140,9 +141,134 @@ app.post('/book', (req, res) => {
         con.query(insert);
         res.render('success', {resId: reserveID, amount: totalAmount});
     });
-})
+});
 
+app.post('/searchTrip', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched where origin = "'+req.body.origin+'" and destination = "'+req.body.destination+'";';
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
 
+//sort by id
+app.get('/viewTripsSortById', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 1;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
+
+//sort by bus liner
+app.get('/viewTripsSortByLiner', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 2;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
+
+//sort by origin
+app.get('/viewTripsSortByOrigin', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 3;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
+
+//sort by destination
+app.get('/viewTripsSortByDes', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 4;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
+
+//sort by seats available
+app.get('/viewTripsSortBySeats', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 5;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
+
+//sort by date of departure
+app.get('/viewTripsSortByDate', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 6;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
+
+//sort by fare
+app.get('/viewTripsSortByFare', (req, res) => {
+    if(req.session.user) {
+        let trips = [];
+        let query = 'SELECT * from bus_sched ORDER BY 7;'
+        con.query(query, (err, result) => {
+            if(err) throw err;
+            trips = JSON.stringify(result);
+            let arr = JSON.parse(trips);
+            res.render('viewTrips', {trips:arr});
+        });
+    } else {
+        res.render('login');
+    }
+});
 
 // listen on port 8080
 app.listen(8080, function() {

@@ -78,6 +78,10 @@ header{
     text-decoration: none;
     color: black
 }
+.theader {
+    text-decoration: none;
+    color: black;
+}
 .navbar {
     overflow: hidden;
     background-color: #0d0d0d;
@@ -308,7 +312,7 @@ hr{
     border-radius: 10px;
     font-size: 16px;
 }
-.detailsButton{
+.detailsButton, .searchSubmit{
     padding: 7px;
     border-radius: 10px;
     font-size: 16px;
@@ -344,4 +348,9 @@ hr{
     background-color: white;
     text-align: center;
     letter-spacing: 10px;
+}
+
+.searchArea {
+    text-align: right;
+    padding-right: 110px;
 }
